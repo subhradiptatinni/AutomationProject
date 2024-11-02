@@ -1,0 +1,5 @@
+package SeleniumPractice.pageobjects;
+
+public class LandingPage {
+
+}

@@ -1,0 +1,60 @@
+package SeleniumPractice;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import SeleniumPractice.pageobjects.LandingPage;
+import SeleniumPractice.pageobjects.ProductCatalogue;
+import SeleniumPractice.pageobjects.cartPage;
+import SeleniumPractice.pageobjects.checkOutPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class StandAloneOrderTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String productname= "ADIDAS ORIGINAL";
+		String countryName= "India";
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		driver.manage().window().maximize();
+		//Thread.sleep(100);
+		LandingPage landingpage= new LandingPage(driver);
+		landingpage.goTo();
+		
+		ProductCatalogue pc= landingpage.loginApplication("subhradipta.tinni@gmail.com", "Qwerty@123");
+		List<WebElement>products= pc.getProductList();
+		pc.addProductToCart(productname);
+		
+		
+		cartPage cpage= pc.goToCartPage();
+		Assert.assertTrue(cpage.VerifyProductDisplay(productname));
+		checkOutPage check= cpage.goToCheckOut();
+		check.selectCountry(countryName);
+	
+
+
+		
+	
+		
+		
+		
+//		Thread.sleep(1000);
+//		driver.findElement(By.cssSelector(".action__submit")).click();
+//		String confirm= driver.findElement(By.cssSelector(".hero-primary")).getText();
+//		Assert.assertTrue(confirm.equalsIgnoreCase(" Thankyou for the order."));
+		}
+
+	}
+
+

@@ -1,0 +1,16 @@
+package SeleniumPractice.test;
+
+import org.testng.Assert;
+
+import SeleniumPractice.TestComponent.BaseTest;
+
+public class ErrorValidationTest extends BaseTest{
+	
+	@Test(groups = {"Errorhanding"}, retryAnalyzer)
+	public void LoginErrorvalidation() throws IOException, InterruptedException {
+		
+		landingPage.loginApplication("subhradipta.tinni@gmai.com", "Qwerty@123");
+		Assert.assertEquals("Incorrect email password", landingPage.getErrorMessage);
+	}
+
+}

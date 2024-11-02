@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-02T01:51:37 IST" name="Default suite" finished-at="2024-11-02T01:52:03 IST" duration-ms="25940">
+    <groups>
+    </groups>
+    <test started-at="2024-11-02T01:51:37 IST" name="Default test" finished-at="2024-11-02T01:52:03 IST" duration-ms="25940">
+      <class name="SeleniumPractice.test.StandAloneOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:SeleniumPractice.test.StandAloneOrderTest@3eb25e1a]" started-at="2024-11-02T01:51:37 IST" name="launchApplication" finished-at="2024-11-02T01:51:46 IST" duration-ms="8953" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="OrderProduct()[pri:0, instance:SeleniumPractice.test.StandAloneOrderTest@3eb25e1a]" started-at="2024-11-02T01:51:46 IST" name="OrderProduct" finished-at="2024-11-02T01:52:02 IST" duration-ms="16645" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrderProduct -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:SeleniumPractice.test.StandAloneOrderTest@3eb25e1a]" started-at="2024-11-02T01:52:02 IST" name="closeBrowser" finished-at="2024-11-02T01:52:03 IST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- SeleniumPractice.test.StandAloneOrderTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
